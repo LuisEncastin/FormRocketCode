@@ -21,7 +21,6 @@ function FormProvider (props) {
   // State
   const [inputs, setInputs] = useState({});
   
-
     return(
         <FormContext.Provider value={{
             inputs,

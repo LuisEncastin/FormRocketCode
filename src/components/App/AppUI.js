@@ -3,9 +3,9 @@ import { Template } from '../Template/Template'
 
 function AppUI() {
     return (
-      <div>
+      <React.Fragment>
         <Template/>
-      </div>
+      </React.Fragment>
     );
   }
 
