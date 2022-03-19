@@ -4,7 +4,7 @@ import { Template } from '../Template/Template'
 function AppUI() {
     return (
       <div>
-        <Template/>  
+        <Template/>
       </div>
     );
   }

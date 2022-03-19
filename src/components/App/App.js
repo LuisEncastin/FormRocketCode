@@ -1,14 +1,12 @@
 // import './App.css';
 import { AppUI } from './AppUI'
+import { FormProvider } from '../Context/Context'
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="App-header">
-        AppJS Título de prueba
-      </h1>
+    <FormProvider>
       <AppUI/>
-    </div>
+    </FormProvider>
   );
 }
 

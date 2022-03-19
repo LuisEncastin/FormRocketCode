@@ -1,15 +1,16 @@
 import React from 'react';
+import { useState } from "react";
 // import { useLocalStorage } from '../TodoContext/customHooks';
 
-const ToDoContext = React.createContext();
+const FormContext = React.createContext();
 
 //React.createContext incuye 2 elementos:
 //<ToDoContext.Provider></ToDoContext.Provider> => las propiedades que queremos exportar
 //<ToDoContext.Consumer></ToDoContext.Consumer> => lo que nos permitirá consumirlas.
 
-function formProvider (props) {
+function FormProvider (props) {
 
-    // Custom hook - localStorage
+// Custom hook - localStorage
 //   const {
 //     item: toDos,
 //     saveItem: saveToDos,
@@ -18,27 +19,17 @@ function formProvider (props) {
 //     } = useLocalStorage('TODOS_V1', []);
 
   // State
-  const [searchValue, setSearchValue] = React.useState('');
-  const [openModal, setOpenModal] = React.useState(false);
+  const [inputs, setInputs] = useState({});
+  
 
     return(
-        <ToDoContext.Provider value={{
-            loading,
-            error,
-            totalToDos,
-            completedToDos,
-            searchValue,
-            setSearchValue,
-            searchedTodos,
-            addToDo,
-            completeToDo, 
-            deleteToDo,
-            openModal,
-            setOpenModal
+        <FormContext.Provider value={{
+            inputs,
+            setInputs
         }}>
             {props.children}
-        </ToDoContext.Provider>
+        </FormContext.Provider>
     )
 }
 
-export { ToDoContext, ToDoProvider};
+export { FormContext, FormProvider};

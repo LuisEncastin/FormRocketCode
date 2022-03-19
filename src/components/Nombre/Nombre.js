@@ -1,11 +1,13 @@
 import React from 'react';
-import { useState } from "react";
+import { FormContext } from '../Context/Context';
 import './Nombre.css';
 
 function Nombre() {
 
-    const [inputs, setInputs] = useState({});
-    // const [nombre, setNombre] = useState('');
+    const { 
+        inputs,
+        setInputs
+     } = React.useContext(FormContext);
 
     const handleChange = (event) => {
       const name = event.target.name;
