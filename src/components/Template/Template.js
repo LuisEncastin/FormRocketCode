@@ -1,7 +1,9 @@
 import React from 'react';
-import { Nombre } from '../Nombre/Nombre'
-import { FormResults } from '../FormResults/FormResults'
+import { UserName } from '../UserName/UserName';
 import { Birthday } from '../Birthday/Birthday';
+import { ContactData } from '../ContactData/ContactData';
+import { FormResults } from '../FormResults/FormResults';
+
 
 import './Template.css';
 
@@ -17,8 +19,9 @@ function Template() {
         <form className="template" onSubmit={handleSubmit}>
             <h2>Título del formulario. </h2>
             <h3>En menos de 5 minutos. </h3>
-            <Nombre/>
+            <UserName/>
             <Birthday/>
+            <ContactData/>
             <input type="submit" />
             <FormResults/>
         </form>

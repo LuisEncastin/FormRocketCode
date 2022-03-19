@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormContext } from '../Context/Context';
-import './Nombre.css';
+import './UserName.css';
 
-function Nombre() {
+function UserName() {
 
     const { 
         inputs,
@@ -29,4 +29,4 @@ function Nombre() {
     );
 }
 
-export { Nombre };
+export { UserName };
