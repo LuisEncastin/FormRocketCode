@@ -12,8 +12,6 @@ function Template() {
 
     // react context
     const {
-      inputs,
-      setNewUserInfo,
       openModal,
       setOpenModal,
    } = React.useContext(FormContext);
@@ -23,12 +21,9 @@ function Template() {
     const handleSubmit = (event) => {
         event.preventDefault();
         // First set the user info and Now send the user info to the context
-        setNewUserInfo(inputs);
-      }
+        setOpenModal(!openModal);
+    };
 
-  const onClickButton = () => {
-    setOpenModal(!openModal);
-  };
 
     return (
         <form className="template" onSubmit={handleSubmit}>
@@ -37,7 +32,7 @@ function Template() {
             <UserName/>
             <Birthday/>
             <ContactData/>
-            <input type="submit" onClick={onClickButton}/>
+            <input type="submit"/>
 
             {!!openModal && (
                 <Modal>

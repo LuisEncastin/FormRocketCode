@@ -21,25 +21,20 @@ function FormProvider (props) {
     // State
     const [inputs, setInputs] = useState({});
     const [openModal, setOpenModal] = React.useState(false);
-    
-    //Variables de sesión
-    
-    // const userDataVariables = async(inputs) => {
-    //     let name = await inputs.name;
-    //     let secondName = await inputs.secondName;
-    //     let fathersLastName = await inputs.fathersLastName;
-    //     let mothersLastName = await inputs.mothersLastName;
 
-    //     let birthdayDay = await inputs.day;
-    //     let birthdayMonth = await inputs.month;
-    //     let birthdayYear = await inputs.Year;
+    // Methods to save items
 
-    //     let email = await inputs.email;
-    //     let phone = await inputs.email;
 
-    //     console.log(name, secondName, fathersLastName, mothersLastName, birthdayDay, birthdayMonth, birthdayYear, email, phone);
 
-    // };
+//   const addToDo = (text) => {
+//     const newToDos = [...toDos];
+//     newToDos.push({
+//       completed: false,
+//       text,
+//     });
+//     saveToDos(newToDos);
+//   }
+
 
     return(
         <FormContext.Provider value={{

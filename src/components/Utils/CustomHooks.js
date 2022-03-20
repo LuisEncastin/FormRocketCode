@@ -56,9 +56,9 @@ function useSessionStorage(itemName, initialValue) {
     saveItem,
     // loading,
     error,
-  }
+  };
 
   // Custom hook - sessionStorage en ejecución
-  }
+  } 
 
 export { useSessionStorage };

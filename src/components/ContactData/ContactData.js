@@ -6,21 +6,27 @@ function ContactData() {
 
     const { 
         inputs,
-        setInputs
+        setInputs,
+        setNewUserInfo,
      } = React.useContext(FormContext);
 
     const handleChange = (event) => {
       const name = event.target.name;
       const value = event.target.value;
       setInputs(values => ({...values, [name]: value}));
+      setNewUserInfo(inputs);
     }
+
+    const onKeyUp = () => {
+        setNewUserInfo(inputs);
+      }
 
     return(   
         <>
             <section>
                 <label>Datos de contacto:</label>
                 <input type="email" className='form-control' name="email" id="email" placeholder="Correo electrónico" value={inputs.email || ""} onChange={handleChange}/>
-                <input type="tel" className='form-control' name="phone" id="phone" placeholder="Teléfono celular" value={inputs.phone || ""} onChange={handleChange}/>
+                <input type="tel" className='form-control' name="phone" id="phone" placeholder="Teléfono celular" value={inputs.phone || ""} onChange={handleChange} onKeyUp={onKeyUp}/>
             </section>
             <span>Your email is: {inputs.email} Your telephone is: {inputs.phone} </span>
         </>
