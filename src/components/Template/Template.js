@@ -3,16 +3,28 @@ import { UserName } from '../UserName/UserName';
 import { Birthday } from '../Birthday/Birthday';
 import { ContactData } from '../ContactData/ContactData';
 import { FormResults } from '../FormResults/FormResults';
-
+import { FormContext } from '../Context/Context';
 
 import './Template.css';
 
 function Template() {
 
+    // react context
+    const {
+      inputs,
+      setNewUserInfo,
+      userDataVariables,
+   } = React.useContext(FormContext);
+
     // Submit button event
-    const handleSubmit = (event) => {
+
+    const handleSubmit = async(event) => {
         event.preventDefault();
-        alert(" Tu información es la siguiente");
+        // First set the user info and Now send the user info to the context
+        await setNewUserInfo(inputs);
+        await userDataVariables();
+        alert(`Esto va a disparar los resultados`);
+        // alert(`Tu información es la siguiente ${NewUserInfo}`);
       }
 
     return (

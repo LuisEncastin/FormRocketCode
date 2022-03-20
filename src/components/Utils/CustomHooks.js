@@ -1,15 +1,17 @@
 import React from 'react';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 // itemName => El nombre de lo que buscará, o creará, y
 // initialValue => El estado inicial de la variable(puede ser un objeto {}, un array [], un string vacío “”, etc)
 
-function useLocalStorage(itemName, initialValue) {
+function useSessionStorage(itemName, initialValue) {
 
-  const [error, setError] = React.useState(false);
-  const [loading, setLoading] = React.useState(true);
-  // Create and save Item
-  const [item, setItem] = React.useState(initialValue);
+    // Create and save Item
+    const [item, setItem] = React.useState(initialValue);
+
+    // Error and loading
+    const [error, setError] = React.useState(false);
+    // const [loading, setLoading] = React.useState(true);
 
   //useeffect
   React.useEffect(() => {
@@ -19,18 +21,18 @@ function useLocalStorage(itemName, initialValue) {
       try {
         
         // localStorage
-        const localStorageItem = localStorage.getItem(itemName);
+        const sessionStorageItem = sessionStorage.getItem(itemName);
         let parsedItem;
 
-        if (!localStorageItem) {
-          localStorage.setItem(itemName, JSON.stringify(initialValue));
+        if (!sessionStorageItem) {
+          sessionStorage.setItem(itemName, JSON.stringify(initialValue));
           parsedItem = initialValue;
         } else {
-          parsedItem= JSON.parse(localStorageItem);
+          parsedItem= JSON.parse(sessionStorageItem);
         } 
 
         setItem(parsedItem);
-        setLoading(false);
+        // setLoading(false);
 
       } catch (error) {
         
@@ -38,15 +40,14 @@ function useLocalStorage(itemName, initialValue) {
 
       }
 
-
-    }, 2000);
+    }, 1000);
   }, []);
 
   const saveItem = (newItem) => {
 
     try {
       const stringifiedItem = JSON.stringify(newItem);
-      localStorage.setItem(itemName, stringifiedItem);
+      sessionStorage.setItem(itemName, stringifiedItem);
       setItem(newItem);
     } catch (error) {
       setError(error);
@@ -61,15 +62,15 @@ function useLocalStorage(itemName, initialValue) {
   return {
     item,
     saveItem,
-    loading,
+    // loading,
     error,
   }
 
   // itemName se convierte en Item, y save item es lo que nos ayuda a guardarlo
-  // Custom hook - localStorage en ejecución
-  // const [toDos, saveToDos] = useLocalStorage('TODOS_V1', []);
-  // const {item: toDos, saveItem: saveToDos, loading} = useLocalStorage('TODOS_V1', []);
+  // Custom hook - sessionStorage en ejecución
+  // const [toDos, saveToDos] = useSessionStorage('TODOS_V1', []);
+  // const {item: toDos, saveItem: saveToDos, loading} = useSessionStorage('TODOS_V1', []);
 
   }
 
-export { useLocalStorage };
+export { useSessionStorage };
