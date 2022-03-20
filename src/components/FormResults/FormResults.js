@@ -4,14 +4,15 @@ import { FormContext } from '../Context/Context';
 function FormResults() {
 
     const { 
-        inputs
+      newUserInfo,
      } = React.useContext(FormContext);
 
     return (
       <section className='formResults'>
-          <span>Tu nombre es: {inputs.name} {inputs.secondName} {inputs.fathersLastName} {inputs.mothersLastName}</span>
-          <span>Tu cumpleaños es: {inputs.day} de {inputs.month} de {inputs.year}</span>
-          <span>Your email is: {inputs.email} Your telephone is: {inputs.phone} </span>
+          <p>FORM RESULTS</p>
+          <span>Tu nombre es: {newUserInfo.name} {newUserInfo.secondName} {newUserInfo.fathersLastName} {newUserInfo.mothersLastName}</span>
+          <span>Tu cumpleaños es: {newUserInfo.day} de {newUserInfo.month} de {newUserInfo.year}</span>
+          <span>Your email is: {newUserInfo.email} Your telephone is: {newUserInfo.phone} </span> 
       </section>
     );
   }

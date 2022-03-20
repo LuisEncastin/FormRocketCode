@@ -20,40 +20,36 @@ function FormProvider (props) {
 
     // State
     const [inputs, setInputs] = useState({});
+    const [openModal, setOpenModal] = React.useState(false);
     
     //Variables de sesión
     
-    const userDataVariables = async(inputs) => {
-        let name = await inputs.name;
-        let secondName = await inputs.secondName;
-        let fathersLastName = await inputs.fathersLastName;
-        let mothersLastName = await inputs.mothersLastName;
+    // const userDataVariables = async(inputs) => {
+    //     let name = await inputs.name;
+    //     let secondName = await inputs.secondName;
+    //     let fathersLastName = await inputs.fathersLastName;
+    //     let mothersLastName = await inputs.mothersLastName;
 
-        let birthdayDay = await inputs.day;
-        let birthdayMonth = await inputs.month;
-        let birthdayYear = await inputs.Year;
+    //     let birthdayDay = await inputs.day;
+    //     let birthdayMonth = await inputs.month;
+    //     let birthdayYear = await inputs.Year;
 
-        let email = await inputs.email;
-        let phone = await inputs.email;
+    //     let email = await inputs.email;
+    //     let phone = await inputs.email;
 
-        console.log(name, secondName, fathersLastName, mothersLastName, birthdayDay, birthdayMonth, birthdayYear, email, phone);
+    //     console.log(name, secondName, fathersLastName, mothersLastName, birthdayDay, birthdayMonth, birthdayYear, email, phone);
 
-    };
-
-    
-
-    // Ver la info. De aquí la mandaremos al mensaje del formulariol
-
-    console.log("Aquí va la información del usuario.")
-    console.log({newUserInfo});
+    // };
 
     return(
         <FormContext.Provider value={{
             inputs,
             setInputs,
+            openModal,
+            setOpenModal,
+            newUserInfo,
             setNewUserInfo,
             error,
-            userDataVariables,
         }}>
             {props.children}
         </FormContext.Provider>

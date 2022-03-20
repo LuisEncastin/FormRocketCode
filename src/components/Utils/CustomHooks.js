@@ -1,12 +1,8 @@
 import React from 'react';
-// import { useEffect } from 'react';
-
-// itemName => El nombre de lo que buscará, o creará, y
-// initialValue => El estado inicial de la variable(puede ser un objeto {}, un array [], un string vacío “”, etc)
 
 function useSessionStorage(itemName, initialValue) {
 
-    // Create and save Item
+    // Create and save Items
     const [item, setItem] = React.useState(initialValue);
 
     // Error and loading
@@ -15,12 +11,12 @@ function useSessionStorage(itemName, initialValue) {
 
   //useeffect
   React.useEffect(() => {
-    //Simulating API
+
     setTimeout(() => {
 
       try {
         
-        // localStorage
+        // sessionStorage
         const sessionStorageItem = sessionStorage.getItem(itemName);
         let parsedItem;
 
@@ -53,12 +49,8 @@ function useSessionStorage(itemName, initialValue) {
       setError(error);
     }
 
-
   }
 
-  // Definir el lugar donde se guardará la variable => item,
-  // implementar una funcion que se encargue de actualizar el valor de la variable => saveItem.
-  // RETORNAR la variable y la funcion en forma de array!
   return {
     item,
     saveItem,
@@ -66,11 +58,7 @@ function useSessionStorage(itemName, initialValue) {
     error,
   }
 
-  // itemName se convierte en Item, y save item es lo que nos ayuda a guardarlo
   // Custom hook - sessionStorage en ejecución
-  // const [toDos, saveToDos] = useSessionStorage('TODOS_V1', []);
-  // const {item: toDos, saveItem: saveToDos, loading} = useSessionStorage('TODOS_V1', []);
-
   }
 
 export { useSessionStorage };
