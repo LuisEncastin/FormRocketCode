@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormContext } from '../Context/Context';
-import './ContactData.css';
 
 function ContactData() {
 
@@ -23,12 +22,25 @@ function ContactData() {
 
     return(   
         <>
-            <section>
-                <label>Datos de contacto:</label>
-                <input type="email" className='form-control' name="email" id="email" placeholder="Correo electrónico" value={inputs.email || ""} onChange={handleChange}/>
-                <input type="tel" className='form-control' name="phone" id="phone" placeholder="Teléfono celular" value={inputs.phone || ""} onChange={handleChange} onKeyUp={onKeyUp}/>
+            <section className="surveySection">
+                <div className="surveySection--container">
+                    <div className='imgContainer'>
+                                            
+                    </div>
+                    <div className='inputsContainer'>
+                        <h4>Datos de contacto:</h4>
+                        <div>
+                            <input type="email" className='form-control' name="email" id="email" placeholder="Correo electrónico" value={inputs.email || ""} onChange={handleChange} required/>
+                            <input type="tel" className='form-control' name="phone" id="phone" placeholder="Teléfono celular" value={inputs.phone || ""} onChange={handleChange} onKeyUp={onKeyUp} required/>
+                        </div>
+                        <div className='surveySection--result'>
+                            <p>Correo: {inputs.email} <br/>
+                            Teléfono {inputs.phone} </p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <span>Your email is: {inputs.email} Your telephone is: {inputs.phone} </span>
+            
         </>
     );
 }

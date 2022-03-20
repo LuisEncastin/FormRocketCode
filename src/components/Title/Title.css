@@ -1,0 +1,31 @@
+
+.title{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-pink);
+    border-radius: 2% 2% 0 0;
+    border-bottom: 2px solid var(--strong-pink);
+}
+.title--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.title--container h2{
+    font-size: 2rem;
+}
+.title--container h3{
+    font-size: 1.5rem;
+}
+
+.surveyIcon{
+    width: 100px;
+    height: 100px;
+    fill: white;
+    margin: 2rem;
+}

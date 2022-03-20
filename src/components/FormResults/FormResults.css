@@ -1,5 +1,14 @@
-formResults{
-    outline: 3px solid red;
-    width: 350px;
-    height: 300px;
+.formResults{
+    margin: 1rem;
+    padding: 2rem;
+    width: 300px;
+    height: auto;
+    background: var(--light-pink);
+    border-radius: 3%;
+}
+
+.formResults p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
 }

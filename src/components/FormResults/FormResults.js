@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormContext } from '../Context/Context';
+import './FormResults.css';
 
 function FormResults() {
 
@@ -9,10 +10,11 @@ function FormResults() {
 
     return (
       <section className='formResults'>
-          <p>FORM RESULTS</p>
-          <span>Tu nombre es: {newUserInfo.name} {newUserInfo.secondName} {newUserInfo.fathersLastName} {newUserInfo.mothersLastName}</span>
-          <span>Tu cumpleaños es: {newUserInfo.day} de {newUserInfo.month} de {newUserInfo.year}</span>
-          <span>Your email is: {newUserInfo.email} Your telephone is: {newUserInfo.phone} </span> 
+          <h3>FORM RESULTS</h3>
+          <p>Tu nombre es: {newUserInfo.name} {newUserInfo.secondName} {newUserInfo.fathersLastName} {newUserInfo.mothersLastName}</p><br/>
+          <p>Tu cumpleaños es: {newUserInfo.day} de {newUserInfo.month} de {newUserInfo.year}</p><br/>
+          <p>Tu correo es: {newUserInfo.email}</p><br/>
+          <p>Tu teléfono es: {newUserInfo.phone} </p><br/>
       </section>
     );
   }

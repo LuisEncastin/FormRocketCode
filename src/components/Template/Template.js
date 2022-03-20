@@ -1,7 +1,9 @@
 import React from 'react';
+import { Title } from '../Title/Title';
 import { UserName } from '../UserName/UserName';
 import { Birthday } from '../Birthday/Birthday';
 import { ContactData } from '../ContactData/ContactData';
+import { SubmitButton } from '../SubmitButton/SubmitButton';
 import { FormResults } from '../FormResults/FormResults';
 import { FormContext } from '../Context/Context';
 import { Modal } from '../Modal/Modal'
@@ -24,21 +26,19 @@ function Template() {
         setOpenModal(!openModal);
     };
 
-
     return (
         <form className="template" onSubmit={handleSubmit}>
-            <h2>Título del formulario. </h2>
-            <h3>En menos de 5 minutos. </h3>
+            <Title classnName="title"/> 
             <UserName/>
             <Birthday/>
             <ContactData/>
-            <input type="submit"/>
-
+            <SubmitButton/>
             {!!openModal && (
                 <Modal>
-                   <FormResults/> 
+                <FormResults/> 
                 </Modal>
             )}     
+
         </form>
     );
   }

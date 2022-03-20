@@ -1,0 +1,25 @@
+.submitButton--title{
+    height: 45px;
+    width: auto;
+    background-color: var(--gray);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+}
+.submitButton--title p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.submitButton input{
+    margin: 0.5rem 0 1rem;
+    min-height: 45px;
+    width: 250px;
+    font-weight: 600;
+    background: var(--strong-pink);
+    outline: none;
+    border-style: none;
+    border-radius: 5px;
+    color: var(--personal-white);
+}
