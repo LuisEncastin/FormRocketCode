@@ -1,4 +1,6 @@
-* Proyecto diseñado por José Luis Encastin Flores
+* Proyecto diseñado por José Luis Encastin Flores.
+
+* Puedes ver este proyecto en: https://form-rocketcode-luisencastin.netlify.app/
 
 * Características del proyecto:
 
@@ -19,6 +21,8 @@ Requerimientos en historias de usuario:
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 * Project by José Luis Encastin Flores
+
+* You can view this project at: https://form-rocketcode-luisencastin.netlify.app/
 
 * Project features:
 
