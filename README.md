@@ -1,6 +1,8 @@
-Project by Hosé Luis Encastin Flores
+* Proyecto diseñado por José Luis Encastin Flores
 
-Características del proyecto:
+* Puedes ver este proyecto desplegado en: https://luisencastin.github.io/FormRocketCode/
+
+* Características del proyecto:
 
 - Proyecto realizado con HTML5, CSS3, Javascript y React.
 - Como parte de react se usa: useState, useEffect, react.context, Custom hooks, renderizado condicional y la librería React-icons.  
@@ -18,9 +20,11 @@ Requerimientos en historias de usuario:
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-Project by José Luis Encastin Flores
+* Project by José Luis Encastin Flores
 
-Project features:
+* You can see this project at: https://luisencastin.github.io/FormRocketCode/
+
+* Project features:
 
 - Project made with HTML5, CSS3, Javascript and React.
 - From of react I use: useState, useEffect, react.context, Custom hooks, conditional rendering and the React-icons library.
