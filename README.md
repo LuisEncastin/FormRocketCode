@@ -1,7 +1,5 @@
 * Proyecto diseñado por José Luis Encastin Flores
 
-* Puedes ver este proyecto desplegado en: https://luisencastin.github.io/FormRocketCode/
-
 * Características del proyecto:
 
 - Proyecto realizado con HTML5, CSS3, Javascript y React.
@@ -21,8 +19,6 @@ Requerimientos en historias de usuario:
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
 * Project by José Luis Encastin Flores
-
-* You can see this project at: https://luisencastin.github.io/FormRocketCode/
 
 * Project features:
 
