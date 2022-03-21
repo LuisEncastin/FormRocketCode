@@ -5,7 +5,7 @@ function useSessionStorage(itemName, initialValue) {
     // Create and save Items
     const [item, setItem] = React.useState(initialValue);
 
-    // Error and loading
+    // Error and loading. Se iba a añadir la funcionalidad "Loading", pero al final se omitió debido al tiempo de entrega y dado que no es un requerimiento explícito en la prueba.
     const [error, setError] = React.useState(false);
     // const [loading, setLoading] = React.useState(true);
 

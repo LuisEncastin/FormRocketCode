@@ -30,8 +30,8 @@ function ContactData() {
                     <div className='inputsContainer'>
                         <h4>Datos de contacto:</h4>
                         <div>
-                            <input type="email" className='form-control' name="email" id="email" placeholder="Correo electrónico" value={inputs.email || ""} onChange={handleChange} required/>
-                            <input type="tel" className='form-control' name="phone" id="phone" placeholder="Teléfono celular" value={inputs.phone || ""} onChange={handleChange} onKeyUp={onKeyUp} required/>
+                            <input type="email" className='form-control' name="email" id="email" placeholder="Correo electrónico" value={inputs.email || ""} onChange={handleChange}/>
+                            <input type="tel" className='form-control' name="phone" id="phone" placeholder="Teléfono celular" value={inputs.phone || ""} onChange={handleChange} onKeyUp={onKeyUp}/>
                         </div>
                         <div className='surveySection--result'>
                             <p>Correo: {inputs.email} <br/>

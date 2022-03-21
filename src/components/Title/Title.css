@@ -29,3 +29,10 @@
     fill: white;
     margin: 2rem;
 }
+
+.timerIcon{
+    width: 15px;
+    height: 15px;
+    fill: black;
+    margin: 0.5rem 0.2rem 0.2rem;
+}

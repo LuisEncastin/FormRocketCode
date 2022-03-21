@@ -31,7 +31,7 @@ function Birthday() {
                             <input type="number" className='form-control' name="year" id="year" placeholder="Año" value={inputs.year || ""} onChange={handleChange} min="1" max="2022"/>
                         </div>
                         <div className='surveySection--result'>
-                            <p> {inputs.day}  {inputs.month} {inputs.year}</p>
+                            <p>Fecha de nacimiento: {inputs.day}  {inputs.month} {inputs.year}</p>
                         </div>
                     </div>
                 </div>

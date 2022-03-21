@@ -4,7 +4,6 @@ import { useSessionStorage } from '../Utils/CustomHooks';
 
 const FormContext = React.createContext();
 
-//React.createContext incuye 2 elementos:
 //<ToDoContext.Provider></ToDoContext.Provider> => las propiedades que queremos exportar
 //<ToDoContext.Consumer></ToDoContext.Consumer> => lo que nos permitirá consumirlas.
 
@@ -20,20 +19,8 @@ function FormProvider (props) {
 
     // State
     const [inputs, setInputs] = useState({});
+    // Estado para abrir y cerrar los resultados del formulario con el botón iniciar.
     const [openModal, setOpenModal] = React.useState(false);
-
-    // Methods to save items
-
-
-
-//   const addToDo = (text) => {
-//     const newToDos = [...toDos];
-//     newToDos.push({
-//       completed: false,
-//       text,
-//     });
-//     saveToDos(newToDos);
-//   }
 
 
     return(
